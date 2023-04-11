@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   View,
-  ViewPropTypes,
   TouchableOpacity,
   StyleSheet,
   Text
 } from 'react-native';
-import PropTypes from 'prop-types';
 
 const Segment = ({ isTabActive, index, badge, text, firstTabStyle, lastTabStyle, tabStyle, activeTabStyle, tabTextStyle, activeTabTextStyle, tabBadgeContainerStyle, activeTabBadgeContainerStyle,
   tabBadgeStyle, activeTabBadgeStyle, onTabPress, height }) => {
@@ -98,24 +96,6 @@ const SegmentedControlTab = ({ selectedIndex, values, badges, borderRadius, tabs
       }
     </View>
   );
-};
-
-SegmentedControlTab.propTypes = {
-  values: PropTypes.array.isRequired,
-  badges: PropTypes.array,
-  onTabPress: PropTypes.func.isRequired,
-  selectedIndex: PropTypes.number.isRequired,
-  tabsContainerStyle: ViewPropTypes.style,
-  activeTabBadgeContainerStyle: Text.propTypes.style,
-  tabBadgeStyle: Text.propTypes.style,
-  activeTabBadgeStyle: Text.propTypes.style,
-  borderRadius: PropTypes.number,
-  tabStyle: ViewPropTypes.style,
-  activeTabStyle: ViewPropTypes.style,
-  tabTextStyle: Text.propTypes.style,
-  activeTabTextStyle: Text.propTypes.style,
-  tabBadgeContainerStyle: Text.propTypes.style,
-  height: PropTypes.number.isRequired,
 };
 
 const styles = StyleSheet.create({
